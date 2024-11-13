@@ -1,12 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-texto',
   standalone: true,
-  imports: [],
   templateUrl: './texto.component.html',
-  styleUrl: './texto.component.css'
+  styleUrls: ['./texto.component.css']
 })
 export class TextoComponent {
+  @Input() value: string = '';
+  @Output() valueChange = new EventEmitter<string>();
 
+  onInputChange(event: Event) {
+    const input = event.target as HTMLInputElement; // Aseguramos que el target sea un HTMLInputElement
+    this.valueChange.emit(input.value);
+  }
 }

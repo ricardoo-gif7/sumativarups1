@@ -1,0 +1,11 @@
+.output-container {
+    width: 300px;
+    height: 200px;
+    border: 2px solid #000;
+    padding: 10px;
+    transition: transform 0.5s;
+  }
+  
+  .output-container.animate {
+    transform: scale(1.1); /* Escala para la animación */
+  }

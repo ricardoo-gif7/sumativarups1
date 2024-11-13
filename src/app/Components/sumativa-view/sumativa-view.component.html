@@ -1,1 +1,26 @@
-<p>sumativa-view works!</p>
+<div class="card-header">
+  <h1>SUMATIVA</h1>
+</div>
+<div class="card">
+  <div class="card-body">
+    <div class="left-column">
+      <div class="button-group">
+        <app-botonaceptar (click)="onButtonClick('Aceptar')"></app-botonaceptar>
+        <app-botoncancelar (click)="onButtonClick('Cancelar')"></app-botoncancelar>
+        <app-botonprimario (click)="onButtonClick('Primario')"></app-botonprimario>
+        <app-botonsecundario (click)="onButtonClick('Secundario')"></app-botonsecundario>
+        <app-botonmodooscuro (click)="onButtonClick('Modo Oscuro')"></app-botonmodooscuro>
+      </div>
+      <div class="input-group">
+        <app-email [(value)]="email" (valueChange)="onEmailChange($event)"></app-email>
+        <span [ngClass]="{'valid': emailValidation, 'invalid': !emailValidation}">Correcto</span>
+        <app-contra [(value)]="password" (valueChange)="onPasswordChange($event)"></app-contra>
+        <span *ngIf="passwordWarning" class="warning">La contraseña es débil</span>
+        <app-texto [(value)]="text" (valueChange)="onTextChange($event)" placeholder="Ingrese Texto"></app-texto>
+      </div>
+    </div>
+    <div class="right-column">
+      <app-output-view [email]="email" [password]="password" [text]="text"></app-output-view>
+    </div>
+  </div>
+</div>
