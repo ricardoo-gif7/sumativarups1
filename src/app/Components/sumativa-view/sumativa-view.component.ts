@@ -57,16 +57,16 @@ export class SumativaViewComponent {
   onAcceptClick() {
     this.outputView.rotate(); // Rotar y cambiar color al hacer clic en aceptar
   }
-
+  
   onCancelClick() {
-    this.outputView.reset(); // Reiniciar la vista de salida al hacer clic en cancelar
+    this.outputView.reset(); // Restablecer al hacer clic en cancelar
   }
-
+  
   onShapeChange() {
-    // Lógica para cambiar la forma del botón primario
+    this.outputView.changeShape(); // Cambiar la forma
   }
-
+  
   onFaceToggle() {
-    // Lógica para alternar la cara del botón secundario
+    this.outputView.toggleFace(); // Cambiar la carita
   }
 }
