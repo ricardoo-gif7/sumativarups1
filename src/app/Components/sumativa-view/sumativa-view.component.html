@@ -5,10 +5,10 @@
   <div class="card-body">
     <div class="left-column">
       
-        <app-botonaceptar (acceptClick)="onAcceptClick()"></app-botonaceptar>
-        <app-botoncancelar (cancelClick)="onCancelClick()"></app-botoncancelar>
-        <app-botonprimario (shapeChange)="onShapeChange()"></app-botonprimario>
-        <app-botonsecundario (faceToggle)="onFaceToggle()"></app-botonsecundario>
+      <app-botonaceptar (acceptClick)="outputView.rotate()"></app-botonaceptar>
+<app-botoncancelar (cancelClick)="outputView.reset()"></app-botoncancelar>
+<app-botonprimario (shapeChange)="outputView.changeShape()"></app-botonprimario>
+<app-botonsecundario (faceToggle)="outputView.toggleFace()"></app-botonsecundario>
         <app-botonmodooscuro (click)="toggleDarkMode()"></app-botonmodooscuro>
       
       <div class="input-group">
@@ -24,7 +24,7 @@
       </div>
     </div>
     <div class="right-column">
-      <app-output-view [email]="email" [password]="password" [text]="text"></app-output-view>
+      <app-output-view #outputView [email]="email" [password]="password" [text]="text"></app-output-view>
     </div>
   </div>
 </div>

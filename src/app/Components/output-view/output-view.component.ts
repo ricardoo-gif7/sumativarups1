@@ -14,39 +14,42 @@ export class OutputViewComponent {
   @Input() password: string = '';
   @Input() text: string = '';
 
-  isRotated: boolean = false;
-  isRed: boolean = false;
-  isSmall: boolean = false;
-  
-  shape: string = 'square'; // forma inicial
-  happyFace: boolean = false; // estado de la carita
+  isRotated = false;
+  isRed = false;
+  isSmall = false;
+  happyFace = false;
+  shape = 'square'; // Forma inicial
 
   rotate() {
     this.isRotated = true;
     this.isRed = true;
-
-    // Reset rotation after animation
     setTimeout(() => {
       this.isRotated = false;
-      this.isRed = false; // Restablecer color después de la rotación
-    }, 1000); // 1000ms para que coincida con la duración de la animación
+      this.isRed = false;
+    }, 1000);
   }
-
+  
   reset() {
-    this.isSmall = true; // Hacer pequeño el cuadrado
-    // Reset small animation after it completes
+    this.isSmall = true;
     setTimeout(() => {
-      this.isSmall = false; // Volver al tamaño original
-    }, 500); // 500ms para que coincida con la duración de la animación
+      this.isSmall = false;
+    }, 500);
   }
-
+  
+  // Método para cambiar la forma
   changeShape() {
     const shapes = ['square', 'circle', 'triangle', 'diamond'];
     const currentIndex = shapes.indexOf(this.shape);
-    this.shape = shapes[(currentIndex + 1) % shapes.length]; // Cambia a la siguiente forma
+    this.shape = shapes[(currentIndex + 1) % shapes.length];
   }
 
+  // Método para alternar la carita
   toggleFace() {
-    this.happyFace = !this.happyFace; // Cambia el estado de la carita
+    this.happyFace = !this.happyFace;
+  }
+
+  // Método para activar el modo oscuro
+  toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
   }
 }
