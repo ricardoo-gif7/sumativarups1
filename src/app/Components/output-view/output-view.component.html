@@ -6,4 +6,4 @@
 
   <p><strong>Texto:</strong> {{ text }}</p>
 
-  <div class="square" id="animated-square"></div>
+  <div [ngClass]="{'rotate': isRotated, 'red': isRed, 'small': isSmall}" class="square" ></div>

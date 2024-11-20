@@ -1,5 +1,6 @@
+import { Component, ViewChild } from '@angular/core';
+import { OutputViewComponent } from '../output-view/output-view.component';
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
 import { BotonaceptarComponent } from '../botonaceptar/botonaceptar.component';
 import { BotoncancelarComponent } from '../botoncancelar/botoncancelar.component';
 import { BotonmodooscuroComponent } from '../botonmodooscuro/botonmodooscuro.component';
@@ -8,7 +9,6 @@ import { BotonsecundarioComponent } from '../botonsecundario/botonsecundario.com
 import { EmailComponent } from '../email/email.component';
 import { ContraComponent } from '../contra/contra.component';
 import { TextoComponent } from '../texto/texto.component';
-import { OutputViewComponent } from '../output-view/output-view.component';
 
 @Component({
   selector: 'app-sumativa-view',
@@ -18,7 +18,7 @@ import { OutputViewComponent } from '../output-view/output-view.component';
   styleUrls: ['./sumativa-view.component.css']
 })
 export class SumativaViewComponent {
-
+  @ViewChild(OutputViewComponent) outputView!: OutputViewComponent;
   email: string = '';
 
   password: string = '';
@@ -28,15 +28,6 @@ export class SumativaViewComponent {
   emailValidation: boolean = true;
 
   passwordWarning: boolean = false;
-
-
-  onButtonClick(action: string) {
-
-    console.log(action);
-
-    // Aquí podrías realizar otras acciones si es necesario
-
-  }
 
 
   onEmailChange(newEmail: string) {
@@ -75,6 +66,15 @@ export class SumativaViewComponent {
 
     return password.length < 8; // Cambia esto según tu lógica
 
+  }
+
+  onButtonClick(action: string) {
+    console.log(action);
+    if (action === 'accept') {
+      this.outputView.rotate();
+    } else if (action === 'cancel') {
+      this.outputView.reset();
+    }
   }
 
 }

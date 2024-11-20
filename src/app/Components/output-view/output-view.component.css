@@ -10,5 +10,32 @@
     width: 80px;
     height: 80px;
     background-color: rgb(102, 153, 119);
-    
+  background-color: white; /* Color inicial */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.5s, transform 0.5s;
+  margin: auto; /* Centrar el cuadro */
+}
+
+.rotate {
+  animation: rotate 1s forwards;
+}
+
+.red {
+  background-color: red; /* Color rojo al rotar */
+}
+
+.small {
+  transform: scale(0.5); /* Hacer pequeño */
+  transition: transform 0.5s;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
