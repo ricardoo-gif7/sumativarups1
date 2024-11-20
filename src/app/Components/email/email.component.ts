@@ -13,12 +13,14 @@ export class EmailComponent {
   @Input() value: string = '';
   @Output() valueChange = new EventEmitter<string>();
   isValid: boolean = true; // Estado de validación
+  emailMessage: string = ''; 
 
   onInputChange(event: Event) {
     const input = event.target as HTMLInputElement; // Aseguramos que el target sea un HTMLInputElement
     this.valueChange.emit(input.value);
     this.isValid = this.validateEmail(input.value); // Validar email
-  }
+    this.emailMessage = this.isValid ? 'Correcto!' : '';
+}
 
   validateEmail(email: string): boolean {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Expresión regular para validar el formato del email

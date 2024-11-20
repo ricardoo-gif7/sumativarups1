@@ -1,6 +1,6 @@
 <!-- src/app/Components/email/email.component.html -->
 <div>
     <input type="email" [value]="value" (input)="onInputChange($event)" placeholder="Ingrese su correo" />
+    <div class="check-message" *ngIf="emailMessage">{{ emailMessage }}</div>
     <div *ngIf="!isValid" class="error-message">Formato de correo electrónico inválido</div>
-    <div *ngIf="!isValid" class="check-message">Correcto!</div>
   </div>

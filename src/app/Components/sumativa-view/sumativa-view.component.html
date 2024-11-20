@@ -19,7 +19,6 @@
 
         <h4 class="correo">Contraseña</h4>
         <app-contra [(value)]="password" (valueChange)="onPasswordChange($event)"></app-contra>
-        <span *ngIf="passwordWarning" class="warning">La contraseña es débil</span>
 
         <h4 class="correo">Texto</h4>
         <app-texto [(value)]="text" (valueChange)="onTextChange($event)" placeholder="Ingrese Texto"></app-texto>

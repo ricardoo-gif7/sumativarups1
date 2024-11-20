@@ -13,11 +13,13 @@ export class ContraComponent {
   @Input() value: string = '';
   @Output() valueChange = new EventEmitter<string>();
   isValid: boolean = true; // Estado de validación
+  passwordMessage: string = ''; // Mensaje de validación
 
   onInputChange(event: Event) {
     const input = event.target as HTMLInputElement; // Aseguramos que el target sea un HTMLInputElement
     this.valueChange.emit(input.value);
     this.isValid = this.validatePassword(input.value); // Validar contraseña
+    this.passwordMessage = this.isValid ? 'Correcto!' : '';
   }
 
   validatePassword(password: string): boolean {
