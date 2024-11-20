@@ -1,3 +1,4 @@
+<div [ngClass]="{ 'dark-mode': isDarkMode }">
 <div class="card-header">
   <h1>SUMATIVA</h1>
 </div>
@@ -7,9 +8,9 @@
       <div class="button-group">
         <app-botonaceptar (click)="onButtonClick('accept')"></app-botonaceptar>
         <app-botoncancelar (click)="onButtonClick('cancel')"></app-botoncancelar>
-        <app-botonprimario (click)="onButtonClick('Primario')"></app-botonprimario>
-        <app-botonsecundario (click)="onButtonClick('Secundario')"></app-botonsecundario>
-        <app-botonmodooscuro (click)="onButtonClick('Modo Oscuro')"></app-botonmodooscuro>
+        <app-botonprimario (click)="changeShape()"></app-botonprimario>
+        <app-botonsecundario (click)="toggleFace()"></app-botonsecundario>
+        <app-botonmodooscuro (click)="toggleDarkMode()">Modo Oscuro</app-botonmodooscuro>
       </div>
       <div class="input-group">
         <h4 class="correo">Correo</h4>
@@ -19,7 +20,7 @@
         <h4 class="correo">Contraseña</h4>
         <app-contra [(value)]="password" (valueChange)="onPasswordChange($event)"></app-contra>
         <span *ngIf="passwordWarning" class="warning">La contraseña es débil</span>
-        
+
         <h4 class="correo">Texto</h4>
         <app-texto [(value)]="text" (valueChange)="onTextChange($event)" placeholder="Ingrese Texto"></app-texto>
       </div>
@@ -27,6 +28,8 @@
     <div class="right-column">
       <app-output-view [email]="email" [password]="password" [text]="text"></app-output-view>
     </div>
+
+  </div>
   </div>
 </div>
 <!-- src/app/Components/sumativa-view/sumativa-view.component.html -->

@@ -1,9 +1,12 @@
-<h2>Datos Ingresados:</h2>
+  <p><strong>Correo</strong> <br> {{ email }}</p>
 
-  <p><strong>Email:</strong> {{ email }}</p>
+  <p><strong>Contraseña</strong> <br> {{ password }}</p>
 
-  <p><strong>Contraseña:</strong> {{ password }}</p>
-
-  <p><strong>Texto:</strong> {{ text }}</p>
-
+  <p><strong>Texto</strong> <br> {{ text }}</p>
+  <br>
   <div [ngClass]="{'rotate': isRotated, 'red': isRed, 'small': isSmall}" class="square" ></div>
+  <!-- src/app/Components/output-view/output-view.component.html -->
+<div [ngClass]="[shape, { 'happy': happyFace, 'sad': !happyFace }]">
+  <span *ngIf="happyFace">😊</span>
+  <span *ngIf="!happyFace && !isSmall">😢</span>
+</div>

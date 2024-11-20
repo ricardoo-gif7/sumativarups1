@@ -1,40 +1,43 @@
-.output-container {
-    width: 300px;
-    height: 200px;
-    border: 2px solid #000;
-    padding: 10px;
-    transition: transform 0.5s;
-  }
-  
+/* src/app/Components/output-view/output-view.component.css */
 .square {
-    width: 80px;
-    height: 80px;
-    background-color: rgb(102, 153, 119);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.5s, transform 0.5s;
-    margin: auto; /* Centrar el cuadro */
+  width: 100px;
+  height: 100px;
+  background-color: blue;
 }
 
-.rotate {
-  animation: rotate 1s forwards;
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid blue;
 }
 
-.red {
-  background-color: rgb(214, 115, 115); /* Color rojo al rotar */
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: blue;
 }
 
-.small {
-  transform: scale(0.5); /* Hacer pequeño */
-  transition: transform 0.5s;
+.diamond {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid blue;
+  transform: rotate(45deg);
 }
 
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.happy {
+  font-size: 50px;
+}
+
+.sad {
+  font-size: 50px;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
 }
