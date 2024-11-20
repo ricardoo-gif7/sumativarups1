@@ -3,9 +3,8 @@ import { Component, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-botoncancelar',
   standalone: true,
-  imports: [],
   templateUrl: './botoncancelar.component.html',
-  styleUrl: './botoncancelar.component.css'
+  styleUrls: ['./botoncancelar.component.css']
 })
 export class BotoncancelarComponent {
   @Output() cancelClick = new EventEmitter<void>();

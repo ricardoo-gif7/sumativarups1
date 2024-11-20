@@ -34,7 +34,6 @@ export class OutputViewComponent {
 
   reset() {
     this.isSmall = true; // Hacer pequeño el cuadrado
-
     // Reset small animation after it completes
     setTimeout(() => {
       this.isSmall = false; // Volver al tamaño original

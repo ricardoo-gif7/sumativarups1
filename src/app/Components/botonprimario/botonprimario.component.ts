@@ -1,4 +1,3 @@
-// src/app/Components/botonprimario/botonprimario.component.ts
 import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({

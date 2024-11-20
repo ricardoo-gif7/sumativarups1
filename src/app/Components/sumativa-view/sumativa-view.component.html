@@ -1,11 +1,10 @@
-<div [ngClass]="{ 'dark-mode': isDarkMode }">
 <div class="card-header">
   <h1>SUMATIVA</h1>
 </div>
 <div class="card">
   <div class="card-body">
     <div class="left-column">
-      <div class="button-group">
+      <div>
         <app-botonaceptar (acceptClick)="onAcceptClick()"></app-botonaceptar>
         <app-botoncancelar (cancelClick)="onCancelClick()"></app-botoncancelar>
         <app-botonprimario (shapeChange)="onShapeChange()"></app-botonprimario>
@@ -27,8 +26,6 @@
     <div class="right-column">
       <app-output-view [email]="email" [password]="password" [text]="text"></app-output-view>
     </div>
-
-  </div>
   </div>
 </div>
 <!-- src/app/Components/sumativa-view/sumativa-view.component.html -->

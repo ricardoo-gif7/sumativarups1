@@ -1,4 +1,3 @@
-// src/app/Components/sumativa-view/sumativa-view.component.ts
 import { Component, ViewChild } from '@angular/core';
 import { OutputViewComponent } from '../output-view/output-view.component';
 import { CommonModule } from '@angular/common';
@@ -25,7 +24,6 @@ export class SumativaViewComponent {
   text: string = '';
   emailValidation: boolean = true;
   passwordWarning: boolean = false;
-  isDarkMode: boolean = false;
 
   onEmailChange(newEmail: string) {
     this.email = newEmail;
@@ -33,15 +31,15 @@ export class SumativaViewComponent {
   }
   
   onPasswordChange(newPassword: string) {
-    this.password = newPassword;
-    this.passwordWarning = this.checkPasswordStrength(newPassword);
+    this.password = newPassword; // Asignar el nuevo valor a la contraseña
+    this.passwordWarning = !this.checkPasswordStrength(newPassword); // Advertencia si la contraseña no es fuerte
   }
 
   onTextChange(newText: string) {
-    this.text = newText;
+    this.text = newText; // Actualizar el texto
   }
 
-  validateEmail(email: string): boolean{
+  validateEmail(email: string): boolean {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Expresión regular para validar el formato del email
     return emailRegex.test(email);
   }
@@ -51,31 +49,24 @@ export class SumativaViewComponent {
     const hasNumber = /\d/.test(password); // Verificar número
     return hasUpperCase && hasNumber; // Retornar true si ambas condiciones se cumplen
   }
-  changeShape() {
-    this.outputView.changeShape(); // Cambia la forma del output-view
-  }
-
-  toggleFace() {
-    this.outputView.toggleFace(); // Cambia entre carita feliz y triste
-  }
 
   toggleDarkMode() {
-    this.isDarkMode = !this.isDarkMode; // Cambia el modo oscuro
-  }
-  
-
-  onShapeChange() {
-    this.outputView.changeShape(); // Cambiar la forma
+    document.body.classList.toggle('dark-mode'); // Alternar clase de modo oscuro
   }
 
-  onFaceToggle() {
-    this.outputView.toggleFace(); // Cambiar la carita
-  }
   onAcceptClick() {
     this.outputView.rotate(); // Rotar y cambiar color al hacer clic en aceptar
   }
 
   onCancelClick() {
-    this.outputView.reset(); // Restablecer al hacer clic en cancelar
+    this.outputView.reset(); // Reiniciar la vista de salida al hacer clic en cancelar
+  }
+
+  onShapeChange() {
+    // Lógica para cambiar la forma del botón primario
+  }
+
+  onFaceToggle() {
+    // Lógica para alternar la cara del botón secundario
   }
 }
