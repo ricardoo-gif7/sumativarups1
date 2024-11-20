@@ -6,6 +6,9 @@
     transition: transform 0.5s;
   }
   
-  .output-container.animate {
-    transform: scale(1.1); /* Escala para la animación */
-  }
+.square {
+    width: 80px;
+    height: 80px;
+    background-color: rgb(102, 153, 119);
+    
+}
