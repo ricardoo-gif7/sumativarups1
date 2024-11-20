@@ -1,0 +1,9 @@
+.error-message {
+    color: red;
+    font-size: 12px;
+  }
+
+  .check-message {
+    color: rgb(96, 185, 100);
+    font-size: 12px;
+  }

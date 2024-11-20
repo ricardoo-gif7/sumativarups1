@@ -1,12 +1,16 @@
-import { Component } from '@angular/core';
+// src/app/Components/botonsecundario/botonsecundario.component.ts
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-botonsecundario',
   standalone: true,
-  imports: [],
   templateUrl: './botonsecundario.component.html',
-  styleUrl: './botonsecundario.component.css'
+  styleUrls: ['./botonsecundario.component.css']
 })
 export class BotonsecundarioComponent {
+  @Output() faceToggle = new EventEmitter<void>();
 
+  onClick() {
+    this.faceToggle.emit(); // Emitir evento al hacer clic
+  }
 }

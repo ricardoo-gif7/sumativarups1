@@ -6,16 +6,16 @@
   <div class="card-body">
     <div class="left-column">
       <div class="button-group">
-        <app-botonaceptar (click)="onButtonClick('accept')"></app-botonaceptar>
-        <app-botoncancelar (click)="onButtonClick('cancel')"></app-botoncancelar>
-        <app-botonprimario (click)="changeShape()"></app-botonprimario>
-        <app-botonsecundario (click)="toggleFace()"></app-botonsecundario>
-        <app-botonmodooscuro (click)="toggleDarkMode()">Modo Oscuro</app-botonmodooscuro>
+        <app-botonaceptar (acceptClick)="onAcceptClick()"></app-botonaceptar>
+        <app-botoncancelar (cancelClick)="onCancelClick()"></app-botoncancelar>
+        <app-botonprimario (shapeChange)="onShapeChange()"></app-botonprimario>
+        <app-botonsecundario (faceToggle)="onFaceToggle()"></app-botonsecundario>
+        <app-botonmodooscuro (click)="toggleDarkMode()"></app-botonmodooscuro>
       </div>
       <div class="input-group">
         <h4 class="correo">Correo</h4>
         <app-email [(value)]="email" (valueChange)="onEmailChange($event)"></app-email>
-        <span [ngClass]="{'valid': emailValidation, 'invalid': !emailValidation}">Correcto</span>
+        <span [ngClass]="{'valid': emailValidation, 'invalid': !emailValidation}"></span>
 
         <h4 class="correo">Contraseña</h4>
         <app-contra [(value)]="password" (valueChange)="onPasswordChange($event)"></app-contra>

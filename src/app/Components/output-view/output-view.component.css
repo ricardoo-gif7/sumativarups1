@@ -1,8 +1,23 @@
 /* src/app/Components/output-view/output-view.component.css */
+
+.square.rotate {
+  transform: rotate(360deg); /* Rotación */
+}
+
+.square.red {
+  background-color: red; /* Color rojo */
+}
+
+.square.small {
+  transform: scale(0.5); /* Hacer pequeño */
+}
+
 .square {
   width: 100px;
   height: 100px;
   background-color: blue;
+  transition: transform 1s, background-color 1s; /* Transiciones para animaciones */
+  margin: auto; /* Centrar */
 }
 
 .triangle {

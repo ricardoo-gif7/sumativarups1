@@ -8,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: './botonmodooscuro.component.css'
 })
 export class BotonmodooscuroComponent {
+  toggleDarkMode() {
+    document.body.classList.toggle('dark-mode'); // Alternar clase de modo oscuro
+  }
 
 }

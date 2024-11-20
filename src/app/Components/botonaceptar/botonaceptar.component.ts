@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter  } from '@angular/core';
 
 @Component({
   selector: 'app-botonaceptar',
@@ -8,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './botonaceptar.component.css'
 })
 export class BotonaceptarComponent {
+  @Output() acceptClick = new EventEmitter<void>();
 
+  onClick() {
+    this.acceptClick.emit(); // Emitir evento al hacer clic
+  }
 }

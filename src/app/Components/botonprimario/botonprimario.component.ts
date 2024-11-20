@@ -1,12 +1,16 @@
-import { Component } from '@angular/core';
+// src/app/Components/botonprimario/botonprimario.component.ts
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-botonprimario',
   standalone: true,
-  imports: [],
   templateUrl: './botonprimario.component.html',
-  styleUrl: './botonprimario.component.css'
+  styleUrls: ['./botonprimario.component.css']
 })
 export class BotonprimarioComponent {
+  @Output() shapeChange = new EventEmitter<void>();
 
+  onClick() {
+    this.shapeChange.emit(); // Emitir evento al hacer clic
+  }
 }

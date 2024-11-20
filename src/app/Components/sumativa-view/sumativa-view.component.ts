@@ -31,7 +31,7 @@ export class SumativaViewComponent {
     this.email = newEmail;
     this.emailValidation = this.validateEmail(newEmail);
   }
-
+  
   onPasswordChange(newPassword: string) {
     this.password = newPassword;
     this.passwordWarning = this.checkPasswordStrength(newPassword);
@@ -41,13 +41,16 @@ export class SumativaViewComponent {
     this.text = newText;
   }
 
-  validateEmail(email: string): boolean {
-    return true; }
-
-  checkPasswordStrength(password: string): boolean {
-    return password.length < 6; // Ejemplo de validación
+  validateEmail(email: string): boolean{
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Expresión regular para validar el formato del email
+    return emailRegex.test(email);
   }
-
+  
+  checkPasswordStrength(password: string): boolean {
+    const hasUpperCase = /[A-Z]/.test(password); // Verificar mayúscula
+    const hasNumber = /\d/.test(password); // Verificar número
+    return hasUpperCase && hasNumber; // Retornar true si ambas condiciones se cumplen
+  }
   changeShape() {
     this.outputView.changeShape(); // Cambia la forma del output-view
   }
@@ -60,12 +63,19 @@ export class SumativaViewComponent {
     this.isDarkMode = !this.isDarkMode; // Cambia el modo oscuro
   }
   
-  onButtonClick(action: string) {
-    console.log(action);
-    if (action === 'accept') {
-      this.outputView.rotate();
-    } else if (action === 'cancel') {
-      this.outputView.reset();
-    }
+
+  onShapeChange() {
+    this.outputView.changeShape(); // Cambiar la forma
+  }
+
+  onFaceToggle() {
+    this.outputView.toggleFace(); // Cambiar la carita
+  }
+  onAcceptClick() {
+    this.outputView.rotate(); // Rotar y cambiar color al hacer clic en aceptar
+  }
+
+  onCancelClick() {
+    this.outputView.reset(); // Restablecer al hacer clic en cancelar
   }
 }
