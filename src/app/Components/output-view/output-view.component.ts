@@ -17,7 +17,7 @@ export class OutputViewComponent {
   isRotated = false;
   isRed = false;
   isSmall = false;
-  happyFace = false;
+  happyFace = false; 
   shape = 'square'; // Forma inicial
 
   rotate() {
@@ -45,7 +45,7 @@ export class OutputViewComponent {
 
   // Método para alternar la carita
   toggleFace() {
-    this.happyFace = !this.happyFace;
+    this.happyFace = !this.happyFace; // Alternar estado de la carita
   }
 
   // Método para activar el modo oscuro

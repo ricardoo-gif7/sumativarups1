@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-botonmodooscuro',
@@ -7,7 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./botonmodooscuro.component.css']
 })
 export class BotonmodooscuroComponent {
-  toggleDarkMode() {
-    document.body.classList.toggle('dark-mode'); // Alternar clase de modo oscuro
+  @Output() darkModeToggle = new EventEmitter<void>();
+
+  onClick() {
+    this.darkModeToggle.emit(); // Emitir evento al hacer clic
   }
 }

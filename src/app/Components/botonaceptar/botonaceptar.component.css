@@ -1,0 +1,16 @@
+/* botonprimario.component.css */
+button {
+    background-color: #7ac06a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #6d9b6b;
+  }
+  
+  /* Repite estilos similares para los otros botones */
