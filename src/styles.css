@@ -25,3 +25,57 @@ body.dark-mode .card {
   background-color: #1e1e1e; /* Color de fondo para el contenedor "card" */
   border: 1px solid #333; /* Opcional: color de borde para el contenedor */
 }
+
+/* Botones */
+button {
+  background-color: #6200ea; /* Color de fondo del botón */
+  color: white; /* Color del texto */
+  border: none;
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 20px 25px; /* Espaciado */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  font-size: 16px; /* Tamaño de fuente */
+  transition: background-color 0.3s; /* Transición suave */
+}
+
+button:hover {
+  background-color: #3700b3; /* Color de fondo al pasar el mouse */
+}
+
+/* Estilos para los inputs */
+input, textarea {
+  width: 70%; /* Ancho completo */
+  padding: 10px; /* Espaciado */
+  border: 1px solid #ccc; /* Borde */
+  border-radius: 5px; /* Bordes redondeados */
+  margin-bottom: 10px; /* Espaciado inferior */
+  transition: border-color 0.3s; /* Transición suave */
+}
+
+input:focus, textarea:focus {
+  border-color: #6200ea; /* Color de borde al enfocar */
+}
+
+/* Otros estilos */
+h1, h2, h3, p {
+  margin: 0 0 10px; /* Espaciado inferior */
+}
+
+h1 {
+  font-size: 24px; /* Tamaño de fuente para h1 */
+}
+
+h2 {
+  font-size: 20px; /* Tamaño de fuente para h2 */
+}
+body {
+  font-family: 'Playfair Display', sans-serif; /* Cambia a la fuente Montserrat */
+  margin: 0;
+  background-color: #f0f0f0; 
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s; /* Transiciones suaves */
+}
+button {
+  font-size: 18px; /* Tamaño de fuente más grande para el botón */
+  padding: 12px 20px; /* Espaciado más amplio */
+}

@@ -1,77 +1,66 @@
 .card {
-    display: flex;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    width: 80%;
-    margin: auto;
-    padding: 20px;
-    background-color: white;
-  }
-  
+  background-color: #ffffff; /* Color de fondo de la tarjeta */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  padding: 20px;
+  margin: 20px auto; /* Centrando el contenedor */
+  max-width: 800px; /* Ancho máximo */
+}
 
-  .card.dark-mode {
-    background-color: black;
-    color: white;
-  }
+.title {
+  font-family: 'Montserrat', sans-serif; /* Cambia a la fuente deseada */
+  font-size: 24px; /* Tamaño de fuente para el título */
+  margin: 0 0 10px; /* Espaciado inferior */
+}
 
-  .card-body {
-    display: flex;
-    width: 100%;
-  }
-  
-  .left-column, .right-column {
-    flex: 1;
-    padding: 10px;
-  }
-  
-  .left-column {
-    border-right: 1px solid gray;
-  }
-  
-  .button-group {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-  
-  .input-group {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .input-group input {
-    margin-bottom: 10px;
-  }
-  
-  .warning {
-    color: red;
-  }
-  
-  .valid {
-    color: green;
-  }
-  
-  .invalid {
-    color: red;
-  }
-  
+.divider {
+  border: 1px solid #ccc; /* Línea divisoria */
+  margin: 20px 0; /* Espaciado superior e inferior */
+}
 
-  .card {
-    display: flex;
-  }
-  
-  .left-column {
-    flex: 1;
-    padding: 20px;
-  }
-  
-  .right-column {
-    flex: 1;
-    padding: 20px;
-  }
+.inputs-outputs {
+  display: flex; /* Usar flexbox para alinear inputs y outputs */
+  justify-content: space-between; /* Espacio entre los elementos */
+}
 
-  .dark-mode {
-    background-color: black;
-    color: white;
-  }
+.inputs {
+  flex: 1; /* Toma el espacio disponible */
+  margin-right: 20px; /* Espaciado a la derecha */
+}
+
+.outputs {
+  flex: 1; /* Toma el espacio disponible */
+}
+
+.shape-buttons {
+  display: flex; /* Usar flexbox para alinear forma y botones */
+  justify-content: space-between; /* Espacio entre los elementos */
+  align-items: center; /* Centrar verticalmente */
+}
+
+.shape {
+  flex: 1; /* Toma el espacio disponible */
+}
+
+.buttons {
+  display: flex; /* Usar flexbox para alinear botones */
+  flex-direction: column; /* Colocar botones en columna */
+  gap: 10px; /* Espaciado entre botones */
+  flex: 1; /* Toma el espacio disponible */
+}
+
+button {
+  width: 100%; /* Botones ocupan todo el ancho */
+  padding: 10px; /* Espaciado dentro del botón */
+  background-color: #6200ea; /* Color de fondo del botón */
+  color: white; /* Color del texto */
+  border: none;
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambiar cursor al pasar el mouse */
+  font-size: 16px; /* Tamaño de fuente */
+  transition: background-color 0.3s; /* Transición suave */
+}
+
+button:hover {
+  background-color: #3700b3; /* Color de fondo al pasar el mouse */
+}

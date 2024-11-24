@@ -1,29 +1,34 @@
-<div class="card-header">
-  <h2>SUMATIVA</h2>
-</div>
 <div class="card">
-  <div class="card-body">
-    <div class="left-column">
-      <app-botonaceptar (acceptClick)="onAcceptClick()"></app-botonaceptar>
-      <app-botoncancelar (cancelClick)="onCancelClick()"></app-botoncancelar>
-      <app-botonprimario (shapeChange)="onShapeChange()"></app-botonprimario>
-      <app-botonsecundario (faceToggle)="onFaceToggle()"></app-botonsecundario>
-      <app-botonmodooscuro (darkModeToggle)="toggleDarkMode()"></app-botonmodooscuro>     
-      <div class="input-group">
-        <h4 class="correo">Correo</h4>
-        <app-email [(value)]="email" (valueChange)="onEmailChange($event)"></app-email>
-        <span [ngClass]="{'valid': emailValidation, 'invalid': !emailValidation}"></span>
+  <h1 class="title">Sumativa</h1>
+  <hr class="divider" />
 
-        <h4 class="correo">Contraseña</h4>
-        <app-contra [(value)]="password" (valueChange)="onPasswordChange($event)"></app-contra>
-
-        <h4 class="correo">Texto</h4>
-        <app-texto [(value)]="text" (valueChange)="onTextChange($event)"></app-texto>
+  <div class="inputs-outputs">
+      <div class="inputs">
+          <app-email [(value)]="email" (valueChange)="onEmailChange($event)"></app-email>
+          <app-contra [(value)]="password" (valueChange)="onPasswordChange($event)"></app-contra>
+          <app-texto [(value)]="text" (valueChange)="onTextChange($event)"></app-texto>
       </div>
-    </div>
-    <div class="right-column">
-      <app-output-view #outputView [email]="email"  [password]="password" 
-      [text]="text"></app-output-view>
-    </div>
+      <div class="outputs">
+        <p><strong>Correo</strong> <br> {{ email }}</p>
+
+        <p><strong>Contraseña</strong> <br> {{ password }}</p>
+      
+        <p><strong>Texto</strong> <br> {{ text }}</p>
+      </div>
+  </div>
+
+  <hr class="divider" />
+
+  <div class="shape-buttons">
+      <div class="shape">
+          <app-output-view #outputView></app-output-view>
+      </div>
+      <div class="buttons">
+          <app-botonaceptar (acceptClick)="onAcceptClick()"></app-botonaceptar>
+          <app-botoncancelar (cancelClick)="onCancelClick()"></app-botoncancelar>
+          <app-botonprimario (shapeChange)="onShapeChange()"></app-botonprimario>
+          <app-botonsecundario (faceToggle)="onFaceToggle()"></app-botonsecundario>
+          <app-botonmodooscuro (darkModeToggle)="toggleDarkMode()"></app-botonmodooscuro>
+      </div>
   </div>
 </div>
