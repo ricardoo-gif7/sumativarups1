@@ -1,5 +1,5 @@
 .card {
-    background-color: #ffffff; /* Color de fondo de la tarjeta */
+    background-color: #b4d6f0; /* Color de fondo de la tarjeta */
     border-radius: 10px; /* Bordes redondeados */
     box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1); /* Sombra sutil */
     padding: 20px;
@@ -14,7 +14,7 @@
 }
 
 .divider {
-    border: 1px solid #ccc; /* Línea divisoria */
+    border: 1px solid #34608a; /* Línea divisoria */
     margin: 20px 0; /* Espaciado superior e inferior */
 }
 

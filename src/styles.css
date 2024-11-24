@@ -41,7 +41,7 @@ body.dark-mode .triangle {
 
 body.dark-mode h1, 
 body.dark-mode p {
-  color: #fff; /* Asegúrate de que los textos se vean bien en modo oscuro */
+  color: #ffffff; /* Asegúrate de que los textos se vean bien en modo oscuro */
 }
 body.dark-mode .card {
   background-color: #1e1e1e; /* Color de fondo para el contenedor "card" */
@@ -78,7 +78,7 @@ h2 {
 body {
   font-family: 'Playfair Display', sans-serif; /* Cambia a la fuente Montserrat */
   margin: 0;
-  background-color: #f0f0f0; 
+  background-color: #c8e4fa; 
   padding: 0;
   transition: background-color 0.3s, color 0.3s; /* Transiciones suaves */
 }
