@@ -3,7 +3,8 @@ button {
     background-color: #ffffff;
     color: #0056b3;
     border-color: #0056b3;
-    border: 20px;
+    border-style: solid;
+    border-width: 2px;
     padding: 10px 20px;
     border-radius: 15px;
     cursor: pointer;

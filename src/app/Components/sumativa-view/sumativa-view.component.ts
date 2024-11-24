@@ -65,7 +65,7 @@ export class SumativaViewComponent {
   onShapeChange() {
     this.outputView.changeShape(); // Cambiar la forma
   }
-  
+
   onFaceToggle() {
     this.outputView.toggleFace(); // Cambiar la carita
   }

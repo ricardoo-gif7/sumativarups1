@@ -41,14 +41,6 @@
   background-color: rgb(84, 143, 96);
 }
 
-.diamond {
-  width: 0;
-  height: 0;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-bottom: 100px solid rgb(84, 143, 96);
-  transform: rotate(45deg);
-}
 
 .happy {
   font-size: 40px;

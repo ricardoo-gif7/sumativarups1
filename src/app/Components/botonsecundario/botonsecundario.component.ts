@@ -7,9 +7,9 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./botonsecundario.component.css']
 })
 export class BotonsecundarioComponent {
-  @Output() shapeChange = new EventEmitter<void>(); // Define el evento shapeChange
+  @Output() faceToggle = new EventEmitter<void>(); // Evento para alternar la carita
 
   onClick() {
-    this.shapeChange.emit(); // Emite el evento shapeChange al hacer clic
+    this.faceToggle.emit(); // Emitir evento al hacer clic
   }
 }
