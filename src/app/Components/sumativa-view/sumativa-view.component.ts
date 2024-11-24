@@ -67,6 +67,6 @@ export class SumativaViewComponent {
   }
   
   onFaceToggle() {
-    this.outputView.toggleFace(); // Cambiar la carita
-  }
+    this.outputView.toggleFace(); // Alterna el estado de la carita
+}
 }
