@@ -24,11 +24,17 @@
           <app-output-view #outputView></app-output-view>
       </div>
       <div class="buttons">
-          <app-botonaceptar (acceptClick)="onAcceptClick()"></app-botonaceptar>
-          <app-botoncancelar (cancelClick)="onCancelClick()"></app-botoncancelar>
-          <app-botonprimario (shapeChange)="onShapeChange()"></app-botonprimario>
-          <app-botonsecundario (faceToggle)="onFaceToggle()"></app-botonsecundario>
-          <app-botonmodooscuro (darkModeToggle)="toggleDarkMode()"></app-botonmodooscuro>
-      </div>
+        <div class="button-group">
+            <app-botonaceptar (acceptClick)="onAcceptClick()"></app-botonaceptar>
+            <app-botoncancelar (cancelClick)="onCancelClick()"></app-botoncancelar>
+        </div>
+        <div class="button-group">
+            <app-botonprimario (shapeChange)="onShapeChange()"></app-botonprimario>
+            <app-botonsecundario (faceToggle)="onFaceToggle()"></app-botonsecundario>
+        </div>
+        <div class="dark-mode-button">
+            <app-botonmodooscuro (darkModeToggle)="toggleDarkMode()"></app-botonmodooscuro>
+        </div>
+    </div>
   </div>
 </div>
