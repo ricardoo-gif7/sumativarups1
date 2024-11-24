@@ -4,7 +4,13 @@
 
   <p><strong>Texto</strong> <br> {{ text }}</p>
   <br>
-  <div [ngClass]="{square, 'rotate': isRotated, 'red': isRed, 'small': isSmall}">
-    <div *ngIf="happyFace" class="happy">😊</div>
-  </div>
-  
+  <div [ngClass]="{
+    'rotate': isRotated, 
+    'red': isRed, 
+    'small': isSmall, 
+    square: square === 'square', 
+    circle: square === 'circle', 
+    triangle: square === 'triangle'
+  }" class="shape">
+  <div *ngIf="happyFace" class="happy">😊</div>
+</div>

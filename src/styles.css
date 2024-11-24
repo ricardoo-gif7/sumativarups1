@@ -1,13 +1,27 @@
-/* styles.css */
 body.dark-mode {
-    background-color: #121212;
-    color: #ffffff;
-  }
-.dark-mode {
-  background-color: #333;
-  color: #fff;
+  background-color: #333; /* Color de fondo oscuro */
+  color: #fff; /* Color de texto claro */
 }
-/* Asegúrate de que otros elementos también tengan estilos para modo oscuro */
-body{
-  font-family: Arial, Helvetica, sans-serif;
+
+body.dark-mode .shape {
+  background-color: #555; /* Color de fondo para el div de forma */
+}
+
+body.dark-mode .triangle {
+  border-left: 50px solid  #1e1e1e;
+  border-right: 50px solid  #1e1e1e;
+  border-bottom: 100px solid  #555;
+}
+
+body.dark-mode .circle {
+  background-color: #555; /* Color de fondo para el div de forma */
+}
+
+body.dark-mode h1, 
+body.dark-mode p {
+  color: #fff; /* Asegúrate de que los textos se vean bien en modo oscuro */
+}
+body.dark-mode .card {
+  background-color: #1e1e1e; /* Color de fondo para el contenedor "card" */
+  border: 1px solid #333; /* Opcional: color de borde para el contenedor */
 }
