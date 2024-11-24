@@ -1,7 +1,7 @@
 .card {
     background-color: #ffffff; /* Color de fondo de la tarjeta */
     border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1); /* Sombra sutil */
     padding: 20px;
     margin: 20px auto; /* Centrando el contenedor */
     max-width: 800px; /* Ancho máximo */
@@ -43,24 +43,19 @@
 }
 
 .buttons {
-    display: flex; /* Usar flexbox para alinear botones */
-    flex-direction: column; /* Colocar botones en columna */
-    gap: 10px; /* Espaciado entre botones */
-    flex: 1; /* Toma el espacio disponible */
+  display: flex; /* Usar flexbox para alinear grupos de botones */
+  flex-direction: column; /* Colocar grupos en columna */
+  gap: 10px; /* Espaciado entre grupos de botones */
+  width: 50%; /* Ancho completo */
 }
 
-button {
-    width: 100%; /* Botones ocupan todo el ancho */
-    padding: 10px; /* Espaciado dentro del botón */
-    background-color: #6200ea; /* Color de fondo del botón */
-    color: white; /* Color del texto */
-    border: none;
-    border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer; /* Cambiar cursor al pasar el mouse */
-    font-size: 16px; /* Tamaño de fuente */
-    transition: background-color 0.3s; /* Transición suave */
+.button-group {
+  display: flex; /* Usar flexbox para alinear botones en cada grupo */
+  justify-content: center; /* Centrar los botones dentro del grupo */
+  gap: 20px; /* Espaciado entre botones de cada grupo */
 }
 
-button:hover {
-    background-color: #3700b3; /* Color de fondo al pasar el mouse */
+.dark-mode-button {
+  margin-top: 10px; /* Espaciado superior para el botón de modo oscuro */
+  text-align: center; /* Centrar el texto del botón */
 }
