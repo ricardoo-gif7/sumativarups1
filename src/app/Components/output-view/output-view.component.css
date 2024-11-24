@@ -12,19 +12,17 @@
   transform: scale(0.5); /* Hacer pequeño */
 }
 
-.shape {
+.square {
   margin: auto; /* Centrar */
   display: flex;
   justify-content: center;
   align-items: center;
   transition: transform 1s, background-color 1s; /* Transiciones para animaciones */
-}
-
-.square {
   width: 100px;
   height: 100px;
   background-color: rgb(84, 143, 96);
 }
+
 
 .triangle {
   width: 0;

@@ -16,8 +16,8 @@ export class OutputViewComponent {
   isRotated = false;
   isRed = false;
   isSmall = false;
-  happyFace = false; // Inicialmente la carita es feliz
-  shape = 'square'; // Forma inicial
+  happyFace = false; // Inicialmente no hay carita
+  square = 'square'; // Forma inicial
 
   rotate() {
     this.isRotated = true;
@@ -36,9 +36,9 @@ export class OutputViewComponent {
   }
 
   changeShape() {
-    const shapes = ['square', 'circle', 'triangle'];
-    const currentIndex = shapes.indexOf(this.shape);
-    this.shape = shapes[(currentIndex + 1) % shapes.length]; // Cambiar la forma
+    const square = ['square', 'circle', 'triangle'];
+    const currentIndex = square.indexOf(this.square);
+    this.square = square[(currentIndex + 1) % square.length]; // Cambiar la forma
   }
 
   toggleFace() {

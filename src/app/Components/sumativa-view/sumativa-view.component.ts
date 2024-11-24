@@ -55,19 +55,17 @@ export class SumativaViewComponent {
   }
 
   onAcceptClick() {
-    console.log('Botón Aceptar presionado');
-    this.outputView.rotate();
+    this.outputView.rotate(); // Rotar y cambiar color al hacer clic en aceptar
   }
   
   onCancelClick() {
-    console.log('Botón Cancelar presionado');
-    this.outputView.reset();
+    this.outputView.reset(); // Restablecer al hacer clic en cancelar
   }
   
   onShapeChange() {
     this.outputView.changeShape(); // Cambiar la forma
   }
-
+  
   onFaceToggle() {
     this.outputView.toggleFace(); // Cambiar la carita
   }
