@@ -4,15 +4,19 @@
 
   <div class="inputs-outputs">
       <div class="inputs">
-          <app-email [(value)]="email" (valueChange)="onEmailChange($event)"></app-email>
-          <app-contra [(value)]="password" (valueChange)="onPasswordChange($event)"></app-contra>
+        <strong>Correo</strong>
+          <app-email [(value)]="email" (valueChange)="onEmailChange($event)"></app-email><br>
+          <strong>Contraseña</strong>
+          <app-contra [(value)]="password" (valueChange)="onPasswordChange($event)"></app-contra><br>
+          <strong>Texto</strong><br>
           <app-texto [(value)]="text" (valueChange)="onTextChange($event)"></app-texto>
       </div>
       <div class="outputs">
+        <br>
         <p><strong>Correo</strong> <br> {{ email }}</p>
-
+        <br><br>
         <p><strong>Contraseña</strong> <br> {{ password }}</p>
-      
+        <br><br>
         <p><strong>Texto</strong> <br> {{ text }}</p>
       </div>
   </div>

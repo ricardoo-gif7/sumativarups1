@@ -1,5 +1,5 @@
 <div>
     <input type="password" [value]="value" (input)="onInputChange($event)" placeholder="Ingrese su contraseña" />
     <div class="check-message" *ngIf="passwordMessage">{{ passwordMessage }}</div>
-    <div *ngIf="!isValid" class="error-message">Contraseña débil, debe contener al menos una mayúscula y un número</div>
+    <div *ngIf="!isValid" class="error-message">Contraseña débil, debe contener al menos una mayúscula <br> y un número</div>
   </div>
