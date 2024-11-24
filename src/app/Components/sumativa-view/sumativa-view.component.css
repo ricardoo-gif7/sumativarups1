@@ -9,6 +9,11 @@
   }
   
 
+  .card.dark-mode {
+    background-color: black;
+    color: white;
+  }
+
   .card-body {
     display: flex;
     width: 100%;
@@ -64,4 +69,9 @@
   .right-column {
     flex: 1;
     padding: 20px;
+  }
+
+  .dark-mode {
+    background-color: black;
+    color: white;
   }

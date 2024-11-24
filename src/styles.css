@@ -7,11 +7,6 @@ body.dark-mode {
   background-color: #333;
   color: #fff;
 }
-body.dark-mode {
-  background-color: #121212; /* Fondo oscuro */
-  color: #ffffff; /* Texto claro */
-}
-
 /* Asegúrate de que otros elementos también tengan estilos para modo oscuro */
 body{
   font-family: Arial, Helvetica, sans-serif;

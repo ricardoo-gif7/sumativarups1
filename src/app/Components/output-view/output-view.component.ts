@@ -38,7 +38,7 @@ export class OutputViewComponent {
   changeShape() {
     const shapes = ['square', 'circle', 'triangle'];
     const currentIndex = shapes.indexOf(this.shape);
-    this.shape = shapes[(currentIndex + 1) % shapes.length];
+    this.shape = shapes[(currentIndex + 1) % shapes.length]; // Cambiar la forma
   }
 
   toggleFace() {
